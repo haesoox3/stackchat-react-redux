@@ -19,11 +19,9 @@ export default class Messages extends Component {
   }
 
   render () {
-
     const channelId = Number(this.props.match.params.channelId); // because it's a string "1", not a number!
     const messages = this.state.messages;
     const filteredMessages = messages.filter(message => message.channelId === channelId);
-
     return (
       <div>
         <ul className="media-list">
